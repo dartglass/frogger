@@ -35,7 +35,7 @@ void main() {
   GameLoopHtml gameLoop = new GameLoopHtml(canvasElement);
   gameLoop.onUpdate = ((GameLoop gameLoop) {
     // Update game logic here.
-    print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
+    //print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
 
     //re-enable jumping
     if(jumpEnable == false){
