@@ -19,7 +19,7 @@ void main() {
   canvasElement = query("#canvas");
 
   Game game = new Game(canvasElement);
-  
+
   bool jumpEnable = false;
   bool jumpTrigger = false;
   double jumpTime = 0.0;
@@ -33,21 +33,21 @@ void main() {
 
   // Construct a game loop.
   GameLoopHtml gameLoop = new GameLoopHtml(canvasElement);
-  gameLoop.onUpdate = ((gameLoop) {
+  gameLoop.onUpdate = ((GameLoop gameLoop) {
     // Update game logic here.
-    //print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
-    
+    print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
+
     //re-enable jumping
-    if(jumpEnable == false){  
-      double deltaJumpTime = gameLoop.gameTime - jumpTime; 
+    if(jumpEnable == false){
+      double deltaJumpTime = gameLoop.gameTime - jumpTime;
       if(deltaJumpTime > 1.0){
         jumpEnable = true;
       }
     }
-    
-    game.update();
+
+    game.update(gameLoop);
   });
-  
+
   gameLoop.onRender = ((gameLoop) {
     // Draw game into canvasElement using WebGL or CanvasRenderingContext here.
     // The interpolation factor can be used to draw correct inter-frame
@@ -57,21 +57,21 @@ void main() {
 
   game.init();
   gameLoop.start();
-  
+
   //Handle glass motion events
   window.onDeviceMotion.listen((DeviceMotionEvent event) {
     num acc = event.accelerationIncludingGravity.z;
-    
+
     // If head tilt is above the threshold then trigger a jump move
     if(acc >= 3.0 && jumpTrigger == false && jumpEnable == true){
       jumpTrigger = true;
-      jumpTime = gameLoop.gameTime; 
+      jumpTime = gameLoop.gameTime;
       game.frogger.jump();
     }
     else if(acc < 0.0 && jumpTrigger == true){
-      jumpTrigger = false;     
+      jumpTrigger = false;
     }
   });
-    
-    
+
+
 }

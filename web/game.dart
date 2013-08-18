@@ -46,13 +46,13 @@ class Game {
     cars.forEach((Car car) => car.draw());
   }
 
-  update() {
-    frogger.update();
-    cars.forEach((Car car) => car.update());
+  update(GameLoop gameLoop) {
+    frogger.update(gameLoop);
+    cars.forEach((Car car) => car.update(gameLoop));
   }
-  
+
   addScore(int val){
     gameScore += val;
   }
-  
+
 }

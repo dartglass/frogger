@@ -19,7 +19,7 @@ class Car {
     game.ctx.fillRect(x, y, w, h);
   }
 
-  update() {
+  update(GameLoop gameLoop) {
     // TEST:
     y = (_i%5) * game.tileHeight;
     _i++;

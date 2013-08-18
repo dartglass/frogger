@@ -42,7 +42,7 @@ class Frogger {
     x = 0;
   }
 
-  update() {
+  update(GameLoop gameLoop) {
 //    // TEST:
 //    x = (_i%9) * game.tileWidth;
 //    _i++;
