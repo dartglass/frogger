@@ -383,11 +383,11 @@ z=new $.Zf(new $.FO(0,$.o8(),null),!1)
 z.hV()
 y=$.K4()
 this.LV(a,new $.JM(y,$globalState.N0.jO))
-y.fP=new $.oG(z,y)
+y.MN=new $.oG(z,y)
 return z.MM},
 $isbC:true},oG:{"":"Tp;a,b",
 call$2:function(a,b){var z=this.b
-z.fP=null
+z.MN=null
 $globalState.N0.Fb(z.Du)
 z=this.a
 if(typeof a==="object"&&a!==null&&!!$.x(a).$isQ4)z.pm(a)
@@ -406,7 +406,7 @@ y.Sp(x)
 w=$globalState.i2
 v=w.t(w,y.gmn())
 if(v==null)return
-if(y.gNh().gfP()==null)return
+if(y.gNh().gMN()==null)return
 u=$globalState.N0!=null&&$globalState.N0.jO!==y.gmn()
 t=this.c
 z.a=t
@@ -418,7 +418,7 @@ x.SQ
 x.Rk.PN(new $.IY(v,new $.JG(z,y,u),w))}},JG:{"":"Tp;a,e,f",
 call$0:function(){var z,y
 z=this.e
-if(z.gNh().gfP()!=null){if(this.f){y=this.a
+if(z.gNh().gMN()!=null){if(this.f){y=this.a
 y.a=$.Hh(y.a)
 y.b=$.Hh(y.b)}y=this.a
 z.gNh().kx(y.a,y.b)}}},ns:{"":"Iy;ni<,a3,mn",
@@ -446,8 +446,8 @@ x=$.Gy($.Pd(["command","message","port",z,"msg",this.b,"replyTo",y]))
 if($globalState.EF===!0){$globalState.vd.K3
 self.postMessage(x)}else{y=$globalState.XC
 w=y.t(y,z.gni())
-if(w!=null)w.postMessage(x)}}},fc:{"":"a;Du<,fP<",
-kx:function(a,b){return this.fP.call$2(a,b)},
+if(w!=null)w.postMessage(x)}}},fc:{"":"a;Du<,MN<",
+kx:function(a,b){return this.MN.call$2(a,b)},
 zH:function(){$globalState.N0.mg(this.Du,this)},
 static:{"":"b9",K4:function(){var z=$.b9
 $.b9=$.WB(z,1)
@@ -2275,13 +2275,15 @@ gl:function(){return this.Uo},
 static:{yB:function(a){return new $.W9(a,$.q8(a),-1,null)}}},cw:{"":"cv;"},Gh:{"":"cw;t5:type=",
 bu:function(a){return a.toString()}},IF:{"":"cw;t5:type="},Ny:{"":"cw;fg:height=,R:width=",
 eW:function(a,b,c){return a.getContext(b)},
-Bf:function(a,b){return this.eW(a,b,null)}},Y5:{"":"vB;"},Gc:{"":"Y5;NE:lineCap},Wi:lineWidth},Lm:strokeStyle}",
+Bf:function(a,b){return this.eW(a,b,null)}},Y5:{"":"vB;"},Gc:{"":"Y5;EJ:font},NE:lineCap},Wi:lineWidth},Lm:strokeStyle}",
 cI:function(a){return a.beginPath()},
 hN:function(a,b,c,d,e){return a.clearRect(b,c,d,e)},
 or:function(a){return a.closePath()},
 Fp:function(a,b,c){return a.lineTo(b,c)},
 bJ:function(a,b,c){return a.moveTo(b,c)},
 Ts:function(a){return a.stroke()},
+ZU:function(a,b,c,d,e){return a.strokeText(b,c,d,e)},
+af:function(a,b,c,d){return a.strokeText(b,c,d)},
 qH:function(a,b,c,d){return a.drawImage(b,c,d)}},OM:{"":"uH;B:length="},CK:{"":"vB;x=,y="},Em:{"":"ea;uw:accelerationIncludingGravity="},Nh:{"":"vB;",
 bu:function(a){return a.toString()}},cv:{"":"uH;",
 gwl:function(a){return new $.PY(a.clientLeft,a.clientTop,a.clientWidth,a.clientHeight)},
@@ -2379,7 +2381,7 @@ w=$.kI(a.height)
 return $.Lr($.Ve($.Ve($.Ve($.Ve(0,z),y),x),w))},
 Ap:function(a){return new $.PY($.pq(a.left),$.pq(a.top),$.pq(a.width),$.pq(a.height))},
 $isPY:true,
-$asPY:null}}],["dart.dom.svg","dart:svg",,{jw:{"":"nj;fg:height=,R:width=,x=,y="},lv:{"":"nj;t5:type=,fg:height=,R:width=,x=,y="},pf:{"":"nj;fg:height=,R:width=,x=,y="},py:{"":"nj;fg:height=,R:width=,x=,y="},Ef:{"":"nj;fg:height=,R:width=,x=,y="},mC:{"":"nj;fg:height=,R:width=,x=,y="},wf:{"":"nj;fg:height=,R:width=,x=,y="},ih:{"":"nj;fg:height=,R:width=,x=,y="},tk:{"":"nj;fg:height=,R:width=,x=,y="},me:{"":"nj;fg:height=,R:width=,x=,y="},qN:{"":"nj;fg:height=,R:width=,x=,y="},EI:{"":"nj;fg:height=,R:width=,x=,y="},MI:{"":"nj;fg:height=,R:width=,x=,y="},Ub:{"":"d5;x=,y="},bM:{"":"nj;fg:height=,R:width=,x=,y="},HA:{"":"d5;x=,y="},Qy:{"":"nj;fg:height=,R:width=,x=,y="},ju:{"":"nj;t5:type=,fg:height=,R:width=,x=,y="},OE:{"":"nj;fg:height=,R:width=,x=,y="},N9:{"":"zU;fg:height=,R:width=,x=,y="},zU:{"":"nj;"},SL:{"":"zU;fg:height=,R:width=,x=,y="},Yd:{"":"nj;fg:height=,R:width=,x=,y="},Gr:{"":"nj;fg:height=,R:width=,x=,y="},NJ:{"":"zU;fg:height=,R:width=,x=,y="},qI:{"":"d5;t5:type="},Lx:{"":"d5;t5:type="},nj:{"":"d5;"},d5:{"":"cv;"},hy:{"":"zU;fg:height=,R:width=,x=,y="},mH:{"":"zU;"},Eo:{"":"mH;x=,y="},UM:{"":"zU;fg:height=,R:width=,x=,y="}}],["dart.isolate","dart:isolate",,{WP:function(){if($.Dz==null)$.Dz=$.K4()
+$asPY:null}}],["dart.dom.svg","dart:svg",,{jw:{"":"nj;fg:height=,R:width=,x=,y="},lv:{"":"nj;t5:type=,fg:height=,R:width=,x=,y="},pf:{"":"nj;fg:height=,R:width=,x=,y="},py:{"":"nj;fg:height=,R:width=,x=,y="},Ef:{"":"nj;fg:height=,R:width=,x=,y="},mC:{"":"nj;fg:height=,R:width=,x=,y="},wf:{"":"nj;fg:height=,R:width=,x=,y="},ih:{"":"nj;fg:height=,R:width=,x=,y="},tk:{"":"nj;fg:height=,R:width=,x=,y="},me:{"":"nj;fg:height=,R:width=,x=,y="},qN:{"":"nj;fg:height=,R:width=,x=,y="},EI:{"":"nj;fg:height=,R:width=,x=,y="},MI:{"":"nj;fg:height=,R:width=,x=,y="},Ub:{"":"d5;x=,y="},bM:{"":"nj;fg:height=,R:width=,x=,y="},HA:{"":"d5;x=,y="},Qy:{"":"nj;fg:height=,R:width=,x=,y="},ju:{"":"nj;t5:type=,fg:height=,R:width=,x=,y="},OE:{"":"nj;fg:height=,R:width=,x=,y="},N9:{"":"zU;fg:height=,R:width=,x=,y="},zU:{"":"nj;"},SL:{"":"zU;fg:height=,R:width=,x=,y="},hB:{"":"nj;fg:height=,R:width=,x=,y="},Gr:{"":"nj;fg:height=,R:width=,x=,y="},NJ:{"":"zU;fg:height=,R:width=,x=,y="},qI:{"":"d5;t5:type="},Lx:{"":"d5;t5:type="},nj:{"":"d5;"},d5:{"":"cv;"},hy:{"":"zU;fg:height=,R:width=,x=,y="},mH:{"":"zU;"},Eo:{"":"mH;x=,y="},UM:{"":"zU;fg:height=,R:width=,x=,y="}}],["dart.isolate","dart:isolate",,{WP:function(){if($.Dz==null)$.Dz=$.K4()
 return $.Dz},rR:{"":"a;"}}],["dart.typed_data","dart:typed_data",,{xG:{"":"AS+FN;",$isList:true,$aszM:null},Vj:{"":"xG+SU;",$aszM:null},AS:{"":"vB;",
 nG:function(a,b,c){var z=$.vd(b)
 if(z.C(b,0)||z.F(b,c))throw $.b(new $.bJ("value "+$.d(b)+" not in range 0.."+c))
@@ -2813,13 +2815,12 @@ w.JM=new $.QA(y)
 w.wE(w)
 x=$.u0.aM(window)
 new $.xC(0,x.MP,x.mE,new $.Cv(z,y,w),x.Gd).cP()},Na:{"":"a;Vt,bG",
-T1:function(){$.W1(this.Vt.Ee,this.bG,0,0)}},vo:{"":"a;Vt,x>,y>,li,MN,rE,LC,CT,Ir",
+T1:function(){$.W1(this.Vt.Ee,this.bG,0,0)}},vo:{"":"a;Vt,x>,y>,li,rE,LC,CT,Ir",
 T1:function(){var z=this.Vt
 z.aH
 z.u0
 $.W1(z.Ee,this.Ir,this.x,this.rE)},
 eC:function(a){var z,y,x,w
-this.MN=this.MN+1
 z=this.rE
 y=this.LC
 x=this.CT
@@ -2836,10 +2837,8 @@ x=y.u0
 if(typeof z!=="number")throw z.V()
 if(typeof x!=="number")throw $.s(x)
 w=z/x
-z=y.kD.x
-if(z===this.li){$.ib($.jn.bu(z))
-if(w>1&&w<2){$.ib("Dead!")
-this.Vt.kD.Dm()}}},
+z=y.kD
+if(z.x===this.li)if(w>1&&w<2)z.Dm()},
 iQ:function(a,b,c,d){var z
 this.Vt=a
 this.li=b
@@ -2876,32 +2875,35 @@ break
 case 8:$.Yj(this.Ir,"images/log4.png")
 this.CT=1
 break}this.rE=$.xH($.p0(a.u0,c),$.OB(this.Ir))},
-static:{yv:function(a,b,c,d){var z=new $.vo(null,null,null,null,0,null,null,null,null)
+static:{yv:function(a,b,c,d){var z=new $.vo(null,null,null,null,null,null,null,null)
 z.iQ(a,b,c,d)
-return z}}},x6:{"":"a;Vt,x>,y>,MN,UH,za,eR,rg,Zz,it,Bl",
+return z}}},x6:{"":"a;Vt,x>,y>,UH,za,eR,rg,Zz,it,Bl",
 T1:function(){var z,y,x,w,v,u
 z=this.Vt
 y=z.aH
 x=z.u0
+w=this.UH
 z=z.Ee
-w=this.Zz
-v=this.x
+v=$.vd(x)
+if(w){w=this.it
+u=this.za
+if(u==null)throw u.U()
 if(typeof y!=="number")throw $.s(y)
-u=$.vd(x)
-$.W1(z,w,v*y,u.U(x,2))
-if(this.UH){z=this.Vt.Ee
-w=this.it
-v=this.za
-if(v==null)throw v.U()
-$.W1(z,w,v*y,u.U(x,2))}},
-Ds:function(){this.x=this.x+1
+$.W1(z,w,u*y,v.U(x,2))}else{w=this.Zz
+u=this.x
+if(typeof y!=="number")throw $.s(y)
+$.W1(z,w,u*y,v.U(x,2))}},
+Ds:function(){if(this.UH)return
+this.x=this.x+1
 if(this.x>=this.Vt.x4){this.x=0
 var z=this.Vt
 z.JH=z.JH+1}$.hp(this.Bl)},
 Dm:function(){this.za=this.x
 this.eR=this.y
 this.x=0
-this.UH=!0},
+this.UH=!0
+var z=this.Vt
+z.JH=z.JH+-1},
 eC:function(a){if(this.UH){this.rg=this.rg+1
 if(this.rg>100){this.rg=0
 this.UH=!1}}},
@@ -2917,7 +2919,7 @@ $.Yj(this.Zz,"images/frogger.png")
 this.it=document.createElement("img")
 $.Yj(this.it,"images/frogger-splat.png")
 this.Bl=document.querySelector("#audioJump")},
-static:{yk:function(a){var z=new $.x6(a,null,null,0,null,null,null,null,null,null,null)
+static:{yk:function(a){var z=new $.x6(a,null,null,null,null,null,null,null,null,null)
 z.GL(a)
 return z}}},fq:{"":"a;N6,fg>,R,u0,aH,x4,WT,JH,Ee,uV,kD,mx,yW",
 T1:function(){$.Eu(this.Ee,0,0,this.R,this.fg)
@@ -2928,12 +2930,15 @@ $.W1(z.Vt.Ee,z.bG,0,0)
 this.kD.T1()
 z=this.mx
 z.aN
-$.bQ(z,new $.QC())},
+$.bQ(z,new $.QC())
+this.Nf()},
 eC:function(a){var z
 this.kD.eC(a)
 z=this.mx
 z.aN
 $.bQ(z,new $.mB(a))},
+Nf:function(){$.Yd(this.Ee,"16pt Calibri")
+$.XB(this.Ee,$.CD.bu(this.JH),10,25)},
 V6:function(a){var z,y
 z=this.N6
 y=$.RE(z)
@@ -2955,10 +2960,8 @@ this.mx.push($.yv(this,3,0,0))
 this.mx.push($.yv(this,4,2,2))
 this.mx.push($.yv(this,4,4,3))
 this.mx.push($.yv(this,1,0,4))
-this.mx.push($.yv(this,6,1,6))
-this.mx.push($.yv(this,6,3,6))
-this.mx.push($.yv(this,6,5,6))
-this.mx.push($.yv(this,7,2,7))
+this.mx.push($.yv(this,6,0,6))
+this.mx.push($.yv(this,6,2,6))
 this.mx.push($.yv(this,7,2,7))},
 static:{Wx:function(a){var z=new $.fq(a,null,null,null,null,9,5,0,null,null,null,null,null)
 z.V6(a)
@@ -3126,8 +3129,10 @@ return $.U6(a).t(a,b)}
 $.W1=function(a,b,c,d){return $.RE(a).qH(a,b,c,d)}
 $.WB=function(a,b){if(typeof a=="number"&&typeof b=="number")return a+b
 return $.Qc(a).g(a,b)}
+$.XB=function(a,b,c,d){return $.RE(a).af(a,b,c,d)}
 $.Y9=function(a){return $.RE(a).e6(a)}
 $.YA=function(a){return $.RE(a).guw(a)}
+$.Yd=function(a,b){return $.RE(a).sEJ(a,b)}
 $.Yj=function(a,b){return $.RE(a).sLA(a,b)}
 $.bs=function(a,b){return $.RE(a).sLm(a,b)}
 $.de=function(a,b){if(a==null)return b==null
@@ -3252,7 +3257,7 @@ $.VQ("SVGForeignObjectElement",$.N9)
 $.VQ("SVGAElement|SVGCircleElement|SVGClipPathElement|SVGDefsElement|SVGEllipseElement|SVGGElement|SVGLineElement|SVGPathElement|SVGPolygonElement|SVGPolylineElement|SVGSwitchElement",$.zU)
 $.MT("SVGGraphicsElement",$.zU)
 $.VQ("SVGImageElement",$.SL)
-$.VQ("SVGMaskElement",$.Yd)
+$.VQ("SVGMaskElement",$.hB)
 $.VQ("SVGPatternElement",$.Gr)
 $.VQ("SVGRectElement",$.NJ)
 $.VQ("SVGScriptElement",$.qI)
