@@ -14,6 +14,7 @@ class Frogger {
   ImageElement froggerSplatImage;
   
   VideoElement jumpSound;
+  VideoElement killSound;
 
   Frogger(this.game) {
     x = 0;
@@ -28,6 +29,7 @@ class Frogger {
     froggerSplatImage.src = "images/frogger-splat.png";
     
     jumpSound = query("#audioJump");
+    killSound = query("#audioDead");
   }
 
   draw() {
@@ -50,7 +52,6 @@ class Frogger {
       x = 0;
       game.addScore(1);
     }
-
     jumpSound.play();
   }
 
@@ -63,6 +64,7 @@ class Frogger {
     x = 0;
     splat = true;
     game.addScore(-1);
+    killSound.play();
   }
 
 
