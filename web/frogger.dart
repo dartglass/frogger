@@ -17,6 +17,7 @@ void main() {
   gameLoop.onUpdate = ((gameLoop) {
     // Update game logic here.
     //print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
+    game.update();
   });
   gameLoop.onRender = ((gameLoop) {
     // Draw game into canvasElement using WebGL or CanvasRenderingContext here.
@@ -73,6 +74,10 @@ class Game {
     frogger.draw();
     cars.forEach((Car car) => car.draw());
   }
+
+  update() {
+    frogger.update();
+  }
 }
 
 class Background {
@@ -87,6 +92,7 @@ class Frogger {
   Game game;
   int x;
   int y;
+  int _i=0;
 
   Frogger(this.game) {
     x = 0;
@@ -100,7 +106,9 @@ class Frogger {
   }
 
   update() {
-
+    // TEST:
+    x = (_i%9) * game.tileWidth;
+    _i++;
   }
 }
 
