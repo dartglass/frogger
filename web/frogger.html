@@ -4,9 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Frogger</title>
-    <link rel="stylesheet" href="frogger.css">
+    <meta name='viewport' content='width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0'/>
   </head>
-  <body>
+  <body style="overflow-x: hidden;overflow-y:auto;margin:0;padding:0;background-color:#000000">
+    <canvas id="canvas" width="400px" height="240px" style="position:fixed;top:0px;left:10px"></canvas>
     <script type="application/dart" src="frogger.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
