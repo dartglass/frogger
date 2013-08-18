@@ -8,6 +8,7 @@ class Game {
   int tileWidth;
   int lanes = 9;
   int rows = 5;
+  int gameScore = 0;
 
   CanvasRenderingContext2D ctx;
 
@@ -49,4 +50,9 @@ class Game {
     frogger.update();
     cars.forEach((Car car) => car.update());
   }
+  
+  addScore(int val){
+    gameScore += val;
+  }
+  
 }

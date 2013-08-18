@@ -29,6 +29,7 @@ class Frogger {
     if(position >= 9){
       //Frog made it across
       position = 0;
+      game.addScore(1);
     }
   }
 
