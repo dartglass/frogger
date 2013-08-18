@@ -19,6 +19,10 @@ void main() {
   canvasElement = query("#canvas");
 
   Game game = new Game(canvasElement);
+  
+  bool jumpEnable = false;
+  bool jumpTrigger = false;
+  double jumpTime = 0.0;
 
   document.onKeyDown.listen((e){
     e.preventDefault();
@@ -32,8 +36,18 @@ void main() {
   gameLoop.onUpdate = ((gameLoop) {
     // Update game logic here.
     //print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
+    
+    //re-enable jumping
+    if(jumpEnable == false){  
+      double deltaJumpTime = gameLoop.gameTime - jumpTime; 
+      if(deltaJumpTime > 1.0){
+        jumpEnable = true;
+      }
+    }
+    
     game.update();
   });
+  
   gameLoop.onRender = ((gameLoop) {
     // Draw game into canvasElement using WebGL or CanvasRenderingContext here.
     // The interpolation factor can be used to draw correct inter-frame
@@ -43,4 +57,21 @@ void main() {
 
   game.init();
   gameLoop.start();
+  
+  //Handle glass motion events
+  window.onDeviceMotion.listen((DeviceMotionEvent event) {
+    num zAcc = event.accelerationIncludingGravity.z;
+        
+    // If head tilt is above the threshold then trigger a jump move
+    if(zAcc > 8.0 && jumpTrigger == false && jumpEnable == true){
+      jumpTrigger = true;
+      jumpTime = gameLoop.gameTime; 
+      game.frogger.jump();
+    }
+    else if(zAcc < 1.0 && jumpTrigger == true){
+      jumpTrigger = false;     
+    }
+  });
+    
+    
 }
