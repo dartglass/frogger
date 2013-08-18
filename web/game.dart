@@ -54,6 +54,7 @@ class Game {
     background.draw();
     frogger.draw();
     cars.forEach((Car car) => car.draw());
+    drawScore();
   }
 
   update(GameLoop gameLoop) {
@@ -64,5 +65,10 @@ class Game {
   addScore(int val){
     gameScore += val;
   }
+  
+  drawScore(){
+    ctx.strokeText(gameScore.toString(), 10, 15, 100);
+  }
+  
 
 }
