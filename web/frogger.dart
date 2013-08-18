@@ -62,6 +62,7 @@ class Frogger {
     
     x = 0;
     splat = true;
+    game.addScore(-1);
   }
 
 

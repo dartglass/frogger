@@ -67,7 +67,8 @@ class Game {
   }
   
   drawScore(){
-    ctx.strokeText(gameScore.toString(), 10, 15, 100);
+    ctx.font = '16pt Calibri';
+    ctx.strokeText(gameScore.toString(), 10, 25);
   }
   
 
