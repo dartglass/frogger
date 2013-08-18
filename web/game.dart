@@ -31,7 +31,19 @@ class Game {
     background = new Background(this);
     frogger = new Frogger(this);
     cars = new List<Car>();
-    cars.add(new Car(this, 1, 0));
+    
+    cars.add(new Car(this, 3, 0, 0));
+    cars.add(new Car(this, 4, 2, 2));
+    cars.add(new Car(this, 4, 4, 3));
+    cars.add(new Car(this, 1, 0, 4));
+    
+    cars.add(new Car(this, 6, 1, 6));
+    cars.add(new Car(this, 6, 3, 6));
+    cars.add(new Car(this, 6, 5, 6));
+    
+    cars.add(new Car(this, 7, 2, 7));
+    cars.add(new Car(this, 7, 2, 7));
+    
   }
 
   init() {
