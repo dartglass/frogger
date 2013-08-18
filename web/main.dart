@@ -61,7 +61,7 @@ void main() {
   //Handle glass motion events
   window.onDeviceMotion.listen((DeviceMotionEvent event) {
     num acc = event.accelerationIncludingGravity.z;
-    print(acc.toString());   
+    
     // If head tilt is above the threshold then trigger a jump move
     if(acc >= 3.0 && jumpTrigger == false && jumpEnable == true){
       jumpTrigger = true;
