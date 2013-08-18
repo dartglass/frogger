@@ -4,7 +4,6 @@ class Frogger {
   Game game;
   int x;
   int y;
-  int _i=0;
   
   bool splat;
   int splatX;
@@ -35,14 +34,16 @@ class Frogger {
     int w = game.tileWidth;
     int h = game.tileHeight;
 
-    game.ctx.drawImage(froggerImage, x*w, h*2);
-    
     if(splat){
       game.ctx.drawImage(froggerSplatImage, splatX*w, h*2);
+    }
+    else{
+      game.ctx.drawImage(froggerImage, x*w, h*2);
     }
   }
 
   jump(){
+    if(splat) return;
     x++;
     if(x >= game.lanes){
       //Frog made it across
