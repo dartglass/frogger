@@ -5,7 +5,6 @@ class Car {
   int x;  
   int y;
   int column; // column position
-  int _i = 0;
   int _yTransformed;
   int speed;
   int direction;
@@ -44,10 +43,6 @@ class Car {
    }
 
   update(GameLoop gameLoop) {
-    // TEST:
-    //y = (_i%5) * game.tileHeight;
-    //print(y.toString());
-    _i++;
     _yTransformed = _yTransformed + (speed * direction);
     
     if(direction > 0){
@@ -61,15 +56,8 @@ class Car {
       }
     }
     num _yPos = (_yTransformed / game.tileHeight);
-    //num row = _yPos / game.tileHeight;
     if(game.frogger.x == column){
-     // print(game.rows);
-      //print(_yPos);
-      //print(_yTransformed);
-      print(game.frogger.x);
-      if(_yPos > 1.0 && _yPos < 2.0){//game.frogger.row == row){
-        print("Dead!");
-        //print(_yPos);
+      if(_yPos > 1.0 && _yPos < 2.0){
         game.frogger.kill();  
       }
     }
