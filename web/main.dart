@@ -60,15 +60,15 @@ void main() {
   
   //Handle glass motion events
   window.onDeviceMotion.listen((DeviceMotionEvent event) {
-    num zAcc = event.accelerationIncludingGravity.z;
-        
+    num acc = event.accelerationIncludingGravity.z;
+    print(acc.toString());   
     // If head tilt is above the threshold then trigger a jump move
-    if(zAcc > 8.0 && jumpTrigger == false && jumpEnable == true){
+    if(acc >= 3.0 && jumpTrigger == false && jumpEnable == true){
       jumpTrigger = true;
       jumpTime = gameLoop.gameTime; 
       game.frogger.jump();
     }
-    else if(zAcc < 1.0 && jumpTrigger == true){
+    else if(acc < 0.0 && jumpTrigger == true){
       jumpTrigger = false;     
     }
   });
