@@ -13,7 +13,7 @@ class Frogger {
     y = 2 * game.tileHeight;
 
     froggerImage = new Element.tag('img');
-    froggerImage.src = "images/and.png";
+    froggerImage.src = "images/frogger.png";
   }
 
   draw() {
