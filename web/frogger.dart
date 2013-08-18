@@ -5,14 +5,13 @@ class Frogger {
   int x;
   int y;
   int _i=0;
-  int position;
+
   ImageElement froggerImage;
 
   Frogger(this.game) {
     x = 0;
     y = 2 * game.tileHeight;
 
-    position = 0;
     froggerImage = new Element.tag('img');
     froggerImage.src = "images/and.png";
   }
@@ -21,16 +20,22 @@ class Frogger {
     int w = game.tileWidth;
     int h = game.tileHeight;
 
-    game.ctx.drawImage(froggerImage, position*w, h*2);
+    game.ctx.drawImage(froggerImage, x*w, h*2);
   }
 
   jump(){
-    position++;
-    if(position >= 9){
+    x++;
+    if(x >= game.lanes){
       //Frog made it across
-      position = 0;
+      x = 0;
       game.addScore(1);
     }
+  }
+  
+  // Kill the frog
+  kill(){
+    //Frog died
+    x = 0;    
   }
 
   update() {
