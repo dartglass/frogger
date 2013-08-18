@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- <html manifest="offline.manifest"> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frogger</title>
+    <meta name='viewport' content='width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0'/>
+  </head>
+  <body style="overflow-x: hidden;overflow-y:auto;margin:0;padding:0;background-color:#000000">
+    <canvas id="canvas" width="400px" height="240px" style="position:fixed;top:0px;left:0px"></canvas>
+
+    <!-- Jump Sound -->
+    <video id="audioJump" src="sounds/jump.ogg"></video>
+    <script type="application/dart" src="main.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
