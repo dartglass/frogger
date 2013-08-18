@@ -7,6 +7,7 @@ class Frogger {
   int _i=0;
 
   ImageElement froggerImage;
+  VideoElement jumpSound;
 
   Frogger(this.game) {
     x = 0;
@@ -14,6 +15,7 @@ class Frogger {
 
     froggerImage = new Element.tag('img');
     froggerImage.src = "images/frogger.png";
+    jumpSound = query("#audioJump");
   }
 
   draw() {
@@ -30,12 +32,14 @@ class Frogger {
       x = 0;
       game.addScore(1);
     }
+
+    jumpSound.play();
   }
-  
+
   // Kill the frog
   kill(){
     //Frog died
-    x = 0;    
+    x = 0;
   }
 
   update() {
