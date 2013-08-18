@@ -37,12 +37,10 @@ class Game {
     cars.add(new Car(this, 4, 4, 3));
     cars.add(new Car(this, 1, 0, 4));
     
-    cars.add(new Car(this, 6, 1, 6));
-    //cars.add(new Car(this, 6, 3, 6));
-    cars.add(new Car(this, 6, 5, 6));
+    cars.add(new Car(this, 6, 0, 6));
+    cars.add(new Car(this, 6, 2, 6));
     
     cars.add(new Car(this, 7, 2, 7));
-    //cars.add(new Car(this, 7, 4, 7));
     
   }
 
