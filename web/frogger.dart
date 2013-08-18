@@ -36,6 +36,8 @@ class Game {
   CanvasRenderingContext2D ctx;
 
   Background background;
+  Frogger frogger;
+  List<Car> cars;
 
   Game(this.canvas) {
     ctx = canvas.getContext('2d');
@@ -43,6 +45,9 @@ class Game {
     width = canvas.width;
 
     background = new Background(this);
+    frogger = new Frogger(this);
+    cars = new List<Car>();
+    cars.add(new Car(this));
   }
 
   init() {
@@ -53,12 +58,30 @@ class Game {
     clear(ctx, width, height);
 
     background.draw();
+    frogger.draw();
+    cars.forEach((Car car) => car.draw());
   }
 }
 
 class Background {
   Game game;
   Background(this.game);
+  draw() {
+
+  }
+}
+
+class Frogger {
+  Game game;
+  Frogger(this.game);
+  draw() {
+
+  }
+}
+
+class Car {
+  Game game;
+  Car(this.game);
   draw() {
 
   }
