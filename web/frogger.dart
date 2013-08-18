@@ -33,6 +33,11 @@ class Game {
   CanvasElement canvas;
   int height;
   int width;
+  int tileHeight;
+  int tileWidth;
+  int lanes = 9;
+  int rows = 5;
+
   CanvasRenderingContext2D ctx;
 
   Background background;
@@ -44,6 +49,9 @@ class Game {
     ctx = canvas.getContext('2d');
     height = canvas.height;
     width = canvas.width;
+    tileWidth = width ~/ lanes;
+    tileHeight = height ~/ rows;
+
     print("canvas.height = $height");
     print("cavnas.width = $width");
 
@@ -77,8 +85,21 @@ class Background {
 
 class Frogger {
   Game game;
-  Frogger(this.game);
+  int x;
+  int y;
+
+  Frogger(this.game) {
+    x = 0;
+    y = 2 * game.tileHeight;
+  }
   draw() {
+    int w = game.tileWidth;
+    int h = game.tileHeight;
+    game.ctx.fillStyle = "rgb(200,0,0)";
+    game.ctx.fillRect(x, y, w, h);
+  }
+
+  update() {
 
   }
 }
