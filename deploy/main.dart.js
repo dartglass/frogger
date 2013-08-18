@@ -2877,7 +2877,7 @@ this.CT=1
 break}this.rE=$.xH($.p0(a.u0,c),$.OB(this.Ir))},
 static:{yv:function(a,b,c,d){var z=new $.vo(null,null,null,null,null,null,null,null)
 z.iQ(a,b,c,d)
-return z}}},x6:{"":"a;Vt,x>,y>,UH,za,eR,rg,Zz,it,Bl",
+return z}}},x6:{"":"a;Vt,x>,y>,UH,za,eR,rg,Zz,it,Bl,wI",
 T1:function(){var z,y,x,w,v,u
 z=this.Vt
 y=z.aH
@@ -2903,7 +2903,8 @@ this.eR=this.y
 this.x=0
 this.UH=!0
 var z=this.Vt
-z.JH=z.JH+-1},
+z.JH=z.JH+-1
+$.hp(this.wI)},
 eC:function(a){if(this.UH){this.rg=this.rg+1
 if(this.rg>100){this.rg=0
 this.UH=!1}}},
@@ -2918,8 +2919,9 @@ this.Zz=document.createElement("img")
 $.Yj(this.Zz,"images/frogger.png")
 this.it=document.createElement("img")
 $.Yj(this.it,"images/frogger-splat.png")
-this.Bl=document.querySelector("#audioJump")},
-static:{yk:function(a){var z=new $.x6(a,null,null,null,null,null,null,null,null,null)
+this.Bl=document.querySelector("#audioJump")
+this.wI=document.querySelector("#audioDead")},
+static:{yk:function(a){var z=new $.x6(a,null,null,null,null,null,null,null,null,null,null)
 z.GL(a)
 return z}}},fq:{"":"a;N6,fg>,R,u0,aH,x4,WT,JH,Ee,uV,kD,mx,yW",
 T1:function(){$.Eu(this.Ee,0,0,this.R,this.fg)
